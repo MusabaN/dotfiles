@@ -1,0 +1,71 @@
+" Setting a bunch of stuff
+set commentary
+set scrolloff=8 
+:set number
+:set relativenumber
+
+" use which-key
+set which-key
+set timeoutlen=8000
+
+" keymaps
+let mapleader = " "
+inoremap jk <Esc>
+nmap <s-l> <Action>(NextTab)
+nmap <s-h> <Action>(PreviousTab)
+
+" Indenting keep selection
+vnoremap < <gv
+vnoremap > >gv
+
+" Moving stuff up and down
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" Yanking and pasting to system clipboard
+vnoremap <leader>y "+y
+nnoremap <leader>p "+p
+vnoremap <leader>p "+p
+
+
+" some commands
+nmap <leader>gr :action RenameElement<CR>
+nmap <leader>go :action OptimizeImports<CR>
+nmap <leader>gg :action Generate<CR>
+" format code
+nmap <leader>gf :action ReformatCode<CR>
+
+" Go to next error
+nmap <leader>n :action GotoNextError<CR>
+
+" Source ~/.ideavimrc
+nmap <leader>vs :source ~/.ideavimrc<CR>
+" open ideavimrc
+nmap <leader>ve :e ~/.ideavimrc<CR>
+
+
+" close current buffer
+nmap <leader>c :action CloseContent<CR>
+nmap <leader>bl :action CloseAllToTheRight<CR>
+nmap <leader>bh :action CloseAllToTheLeft<CR>
+nmap <leader>ba :action CloseAllEditorsButActive<CR>
+
+
+" run commands
+nmap <leader>rr :action Run<CR>
+nmap <leader>rs :action Stop<CR>
+nmap <leader>rd :action Debug<CR>
+
+
+" toggle zen mode
+nmap <leader>z :action ToggleZenMode<CR>
+
+" find commands
+nmap <leader>ff :action GotoFile<CR>
+nmap <leader>fa :action SearchEverywhere<CR>
+nmap <leader>fr :action RecentFiles<CR>
+nmap <leader>ft :action FindInPath<CR>
