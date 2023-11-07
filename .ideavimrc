@@ -31,13 +31,16 @@ vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 vnoremap <leader>p "+p
 
+" gl to show error description
+map gl :action ShowErrorDescription<CR>
+
 
 " some commands
-nmap <leader>gr :action RenameElement<CR>
-nmap <leader>go :action OptimizeImports<CR>
-nmap <leader>gg :action Generate<CR>
+nmap gr :action RenameElement<CR>
+nmap go :action OptimizeImports<CR>
+nmap gg :action Generate<CR>
 " format code
-nmap <leader>gf :action ReformatCode<CR>
+nmap gf :action ReformatCode<CR>
 
 " Go to next error
 nmap <leader>n :action GotoNextError<CR>
@@ -59,6 +62,7 @@ nmap <leader>ba :action CloseAllEditorsButActive<CR>
 nmap <leader>rr :action Run<CR>
 nmap <leader>rs :action Stop<CR>
 nmap <leader>rd :action Debug<CR>
+nmap <leader>rt :action ToggleLineBreakpoint<CR>
 
 
 " toggle zen mode
