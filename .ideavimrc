@@ -36,11 +36,11 @@ map gl :action ShowErrorDescription<CR>
 
 
 " some commands
-nmap gr :action RenameElement<CR>
-nmap go :action OptimizeImports<CR>
-nmap gg :action Generate<CR>
+nmap <leader>gr :action RenameElement<CR>
+nmap <leader>go :action OptimizeImports<CR>
+nmap <leader>gg :action Generate<CR>
 " format code
-nmap gf :action ReformatCode<CR>
+nmap <leader>gf :action ReformatCode<CR>
 
 " Go to next error
 nmap <leader>n :action GotoNextError<CR>
